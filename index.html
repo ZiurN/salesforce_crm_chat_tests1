@@ -50,7 +50,7 @@
 					buttonId: '5732S0000008g94',
 					baseLiveAgentURL: 'https://d.la1-c1cs-ia5.salesforceliveagent.com/chat',
 					eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I2S000000CaU6UAK_1776e1099bd',
-					isOfflineSupportEnabled: true
+					isOfflineSupportEnabled: false
 				}
 			);
 		};
@@ -58,7 +58,7 @@
 			var s = document.createElement('script');
 			s.setAttribute('src', 'https://unicomer--dev1.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 			s.onload = function() {
-				initESW(null);
+				initESW('https://service.force.com');
 			};
 			document.body.appendChild(s);
 		} else {
