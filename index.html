@@ -20,10 +20,9 @@
 	</style>
 	<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 	<script type='text/javascript'>
-		debugger;
 		var initESW = function(gslbBaseURL) {
 			embedded_svc.settings.displayHelpButton = true; //Or false
-			embedded_svc.settings.language = 'es'; //For example, enter 'en' or 'en-US'
+			embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 			//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
 			//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
 			//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
@@ -40,17 +39,17 @@
 			embedded_svc.settings.entryFeature = 'LiveAgent';
 			embedded_svc.init(
 				'https://unicomer--dev1.sandbox.my.salesforce.com',
-				'https://unicomer--dev1.sandbox.my.site.com/ArtefactaDeploy',
+				'https://unicomer--dev1.sandbox.my.site.com/EcommerceArtefacta',
 				gslbBaseURL,
 				'00D3J0000008p8R',
-				'ArtefactaDeploy',
+				'EC_Artefacta_com',
 				{
-					baseLiveAgentContentURL: 'https://c.la1-c1cs-ia5.salesforceliveagent.com/content',
-					deploymentId: '5722S0000008dk7',
-					buttonId: '5732S0000008g94',
-					baseLiveAgentURL: 'https://d.la1-c1cs-ia5.salesforceliveagent.com/chat',
-					eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I2S000000CaU6UAK_1776e1099bd',
-					isOfflineSupportEnabled: true
+					baseLiveAgentContentURL: 'https://c.la1-c1cs-ia4.salesforceliveagent.com/content',
+					deploymentId: '5722S000000Co9o',
+					buttonId: '5732S000000CqSN',
+					baseLiveAgentURL: 'https://d.la1-c1cs-ia4.salesforceliveagent.com/chat',
+					eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I2S000000XZJVUA4_17be0242c4a',
+					isOfflineSupportEnabled: false
 				}
 			);
 		};
@@ -58,7 +57,7 @@
 			var s = document.createElement('script');
 			s.setAttribute('src', 'https://unicomer--dev1.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 			s.onload = function() {
-				initESW('https://service.force.com');
+				initESW(null);
 			};
 			document.body.appendChild(s);
 		} else {
